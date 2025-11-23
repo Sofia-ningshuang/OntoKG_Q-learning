@@ -1,0 +1,552 @@
+@prefix : <http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/> .
+
+<http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2> rdf:type owl:Ontology ;
+                                                                         rdfs:comment "Ontology version 1.0 for construction quality traceback reasoning."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#absRelation
+:absRelation rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insCLDDirectlyImpacts
+:insCLDDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :CageLengthDeviationBeyondCriteria ;
+                       rdfs:range :InadequateConcreteCover .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insCLDIsA
+:insCLDIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :CageLengthDeviationBeyondCriteria ;
+           rdfs:range :GeometricDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insCSDDirectlyImpacts
+:insCSDDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :ConcreteSlumpDeviationBeyondCriteria ;
+                       rdfs:range :PileBodyInternalVoid .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insCSDIsA
+:insCSDIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :ConcreteSlumpDeviationBeyondCriteria ;
+           rdfs:range :StrengthDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insHTWDirectlyImpacts
+:insHTWDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :HighTemperatureWeather ;
+                       rdfs:range :ConcreteSlumpDeviationBeyondCriteria .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insHTWIsA
+:insHTWIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :HighTemperatureWeather ;
+           rdfs:range :EnvironmentalCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insICCDirectlyImpacts
+:insICCDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :InadequateConcreteCover ;
+                       rdfs:range :PileBearingCapabilityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insICCIsA
+:insICCIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :InadequateConcreteCover ;
+           rdfs:range :StrengthDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPBCDirectlyCauses
+:insPBCDirectlyCauses rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :insRelation ;
+                      rdfs:domain :PileBearingCapabilityDefect ;
+                      rdfs:range :PileHiddenDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPBCIsA
+:insPBCIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :PileBearingCapabilityDefect ;
+           rdfs:range :StrengthDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPBIDirectlyCauses
+:insPBIDirectlyCauses rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :insRelation ;
+                      rdfs:domain :PileBodyInternalVoid ;
+                      rdfs:range :PileIntegrityLevelDeviationBeyondCriteria .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPBIDirectlyImpacts
+:insPBIDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :PileBodyInternalVoid ;
+                       rdfs:range :PileBearingCapabilityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPBIIsA
+:insPBIIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :PileBodyInternalVoid ;
+           rdfs:range :GeometricDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPHDIsA
+:insPHDIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :PileHiddenDefect ;
+           rdfs:range :StrengthDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPILDirectlyImpacts
+:insPILDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :PileIntegrityLevelDeviationBeyondCriteria ;
+                       rdfs:range :PileHiddenDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insPILIsA
+:insPILIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :PileIntegrityLevelDeviationBeyondCriteria ;
+           rdfs:range :GeometricDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insRCDDirectlyCauses
+:insRCDDirectlyCauses rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :insRelation ;
+                      rdfs:domain :ReinforcementCageDisplacement ;
+                      rdfs:range :TremiePipeEccentricInstallation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insRCDIsA
+:insRCDIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :ReinforcementCageDisplacement ;
+           rdfs:range :ProcessAnomaly .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insRelation
+:insRelation rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insSBSDirectlyImpacts
+:insSBSDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :SteelBarStrengthDeviationBeyondCriteria ;
+                       rdfs:range :PileBearingCapabilityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insSBSIsA
+:insSBSIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :SteelBarStrengthDeviationBeyondCriteria ;
+           rdfs:range :StrengthDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insSBSTCorrelatesWith
+:insSBSTCorrelatesWith rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :SteelBarStrengthTestReportMissing ;
+                       rdfs:range :SteelBarStrengthDeviationBeyondCriteria .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insSBSTIsA
+:insSBSTIsA rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :absRelation ;
+            rdfs:domain :SteelBarStrengthTestReportMissing ;
+            rdfs:range :InspectionNegligence .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insSMIDirectlyCauses
+:insSMIDirectlyCauses rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :insRelation ;
+                      rdfs:domain :SiteManagementIgnorance ;
+                      rdfs:range :ReinforcementCageDisplacement .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insSMIDirectlyImpacts
+:insSMIDirectlyImpacts rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :insRelation ;
+                       rdfs:domain :SiteManagementIgnorance ;
+                       rdfs:range :CageLengthDeviationBeyondCriteria .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insSMIIsA
+:insSMIIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :SiteManagementIgnorance ;
+           rdfs:range :ManagementCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insTPEDirectlyCauses
+:insTPEDirectlyCauses rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :insRelation ;
+                      rdfs:domain :TremiePipeEccentricInstallation ;
+                      rdfs:range :InadequateConcreteCover .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#insTPEIsA
+:insTPEIsA rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :absRelation ;
+           rdfs:domain :TremiePipeEccentricInstallation ;
+           rdfs:range :OperationalError .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/cageDiameterDeviation
+:cageDiameterDeviation rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :SettingUpReinforcementCage .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/cageLengthDeviation
+:cageLengthDeviation rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :SettingUpReinforcementCage .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/concreteSampleResult
+:concreteSampleResult rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :PouringConcrete .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/concreteSlump
+:concreteSlump rdf:type owl:DatatypeProperty ;
+               rdfs:domain :PouringConcrete .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/horizontalPositionDeviation
+:horizontalPositionDeviation rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :PositioningCalibration .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/mainReinforcementSpacing
+:mainReinforcementSpacing rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :SettingUpReinforcementCage .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/measuredPosition
+:measuredPosition rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/measurementDate
+:measurementDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :MeasuringDrill .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/operationalDeviation
+:operationalDeviation rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/perpendicularityDeviation
+:perpendicularityDeviation rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :MeasuringDrill .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/pileDepthDeviation
+:pileDepthDeviation rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :MeasuringDrill .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/pileIntegrityDeviation
+:pileIntegrityDeviation rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :PileFormation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/pileSampleResult
+:pileSampleResult rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HazardCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/pileTopElevationDeviation
+:pileTopElevationDeviation rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :PileFormation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/steelBarSampleResult
+:steelBarSampleResult rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :SettingUpReinforcementCage .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/stirrupSpacing
+:stirrupSpacing rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SettingUpReinforcementCage .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/verticalAlignmentDeviation
+:verticalAlignmentDeviation rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :PositioningCalibration .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#CageLengthDeviationBeyondCriteria
+:CageLengthDeviationBeyondCriteria rdf:type owl:Class ;
+                                   rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#ConcreteSlumpDeviationBeyondCriteria
+:ConcreteSlumpDeviationBeyondCriteria rdf:type owl:Class ;
+                                      rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#DimensionalDefect
+:DimensionalDefect rdf:type owl:Class ;
+                   rdfs:subClassOf :QualityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#EnvironmentalCondition
+:EnvironmentalCondition rdf:type owl:Class ;
+                        rdfs:subClassOf :HazardCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#FunctionalDefect
+:FunctionalDefect rdf:type owl:Class ;
+                  rdfs:subClassOf :QualityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#FunctionalDeviation
+:FunctionalDeviation rdf:type owl:Class ;
+                     rdfs:subClassOf :QualityDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#GeometricDeviation
+:GeometricDeviation rdf:type owl:Class ;
+                    rdfs:subClassOf :QualityDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#HighTemperatureWeather
+:HighTemperatureWeather rdf:type owl:Class ;
+                        rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#HumanCondition
+:HumanCondition rdf:type owl:Class ;
+                rdfs:subClassOf :HazardCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#InadequateConcreteCover
+:InadequateConcreteCover rdf:type owl:Class ;
+                         rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#Instance
+:Instance rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#ManagementCondition
+:ManagementCondition rdf:type owl:Class ;
+                     rdfs:subClassOf :HazardCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#MaterialCondition
+:MaterialCondition rdf:type owl:Class ;
+                   rdfs:subClassOf :HazardCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#MechanicalCondition
+:MechanicalCondition rdf:type owl:Class ;
+                     rdfs:subClassOf :HazardCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#MethodCondition
+:MethodCondition rdf:type owl:Class ;
+                 rdfs:subClassOf :HazardCondition .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#PerformanceDeviation
+:PerformanceDeviation rdf:type owl:Class ;
+                      rdfs:subClassOf :QualityDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#PileBearingCapabilityDefect
+:PileBearingCapabilityDefect rdf:type owl:Class ;
+                             rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#PileBodyInternalVoid
+:PileBodyInternalVoid rdf:type owl:Class ;
+                      rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#PileHiddenDefect
+:PileHiddenDefect rdf:type owl:Class ;
+                  rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#PileIntegrityLevelDeviationBeyondCriteria
+:PileIntegrityLevelDeviationBeyondCriteria rdf:type owl:Class ;
+                                           rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#PositionDeviation
+:PositionDeviation rdf:type owl:Class ;
+                   rdfs:subClassOf :QualityDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#ReinforcementCageDisplacement
+:ReinforcementCageDisplacement rdf:type owl:Class ;
+                               rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#SiteManagementIgnorance
+:SiteManagementIgnorance rdf:type owl:Class ;
+                         rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#SteelBarStrengthDeviationBeyondCriteria
+:SteelBarStrengthDeviationBeyondCriteria rdf:type owl:Class ;
+                                         rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#SteelBarStrengthTestReportMissing
+:SteelBarStrengthTestReportMissing rdf:type owl:Class ;
+                                   rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#StrengthDefect
+:StrengthDefect rdf:type owl:Class ;
+                rdfs:subClassOf :QualityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#StrengthDeviation
+:StrengthDeviation rdf:type owl:Class ;
+                   rdfs:subClassOf :QualityDeviation .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2#TremiePipeEccentricInstallation
+:TremiePipeEccentricInstallation rdf:type owl:Class ;
+                                 rdfs:subClassOf :Instance .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/AppearanceDefect
+:AppearanceDefect rdf:type owl:Class ;
+                  rdfs:subClassOf :QualityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/Drilling
+:Drilling rdf:type owl:Class ;
+          rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/EnvironmentalDisturbance
+:EnvironmentalDisturbance rdf:type owl:Class ;
+                          rdfs:subClassOf :TriggerEvent .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/ExternalImpact
+:ExternalImpact rdf:type owl:Class ;
+                rdfs:subClassOf :TriggerEvent .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/HazardCondition
+:HazardCondition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/HiddenDefect
+:HiddenDefect rdf:type owl:Class ;
+              rdfs:subClassOf :QualityDefect .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/InspectionNegligence
+:InspectionNegligence rdf:type owl:Class ;
+                      rdfs:subClassOf :TriggerEvent .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/MeasuringDrill
+:MeasuringDrill rdf:type owl:Class ;
+                rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/OperationalError
+:OperationalError rdf:type owl:Class ;
+                  rdfs:subClassOf :TriggerEvent .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/PileConstruction
+:PileConstruction rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/PileFormation
+:PileFormation rdf:type owl:Class ;
+               rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/PileInspection
+:PileInspection rdf:type owl:Class ;
+                rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/PositioningCalibration
+:PositioningCalibration rdf:type owl:Class ;
+                        rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/PouringConcrete
+:PouringConcrete rdf:type owl:Class ;
+                 rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/ProcessAnomaly
+:ProcessAnomaly rdf:type owl:Class ;
+                rdfs:subClassOf :TriggerEvent .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/ProtectionTubeInsertion
+:ProtectionTubeInsertion rdf:type owl:Class ;
+                         rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/QualityDefect
+:QualityDefect rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/QualityDeviation
+:QualityDeviation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/QualityIncident
+:QualityIncident rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/QualityRisk
+:QualityRisk rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/SettingUpCatheter
+:SettingUpCatheter rdf:type owl:Class ;
+                   rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/SettingUpReinforcementCage
+:SettingUpReinforcementCage rdf:type owl:Class ;
+                            rdfs:subClassOf :PileConstruction .
+
+
+###  http://www.semanticweb.org/sofia/ontologies/2025/9/cqtr-ongtology-1.2/TriggerEvent
+:TriggerEvent rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
